@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +29,12 @@ public class MainActivity extends AppCompatActivity {
                 irSecond.putExtra("email", Email);
 
                 startActivity(irSecond);
+            }else {
+                Toast.makeText(this,
+                       "Falta por introducir alguno de los campos",
+                        Toast.LENGTH_SHORT).show();
             }
+
         });
     }
 }
