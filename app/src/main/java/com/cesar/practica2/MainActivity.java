@@ -2,7 +2,9 @@ package com.cesar.practica2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -21,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
             String Email = email.getText().toString();
             String Contraseña = contraseña.getText().toString();
             if (!Email.isEmpty() && !Contraseña.isEmpty()){
-                
+                Intent irSecond = new Intent(this,SecondActivity.class);
+
+                irSecond.putExtra("email", Email);
+
+                startActivity(irSecond);
             }
         });
     }
